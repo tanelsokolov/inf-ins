@@ -1,0 +1,14 @@
+{
+  "name": "metrics-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "cors": "2.8.5",
+    "systeminformation": "5.25.11",
+    "axios": "^1.8.4"
+  }
+}

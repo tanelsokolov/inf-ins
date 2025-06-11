@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  metrics-backend:
+    build: .
+    container_name: metrics-backend
+    hostname: app-server
+    restart: unless-stopped
+    ports:
+      - "10.0.0.1:3000:3000"
+    security_opt:
+      - apparmor:unconfined

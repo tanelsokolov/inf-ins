@@ -1,0 +1,262 @@
+/* Modern CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body, h1, h2, h3, h4, p, ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Main Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  h1 i {
+    color: #3498db;
+    margin-right: 10px;
+  }
+  
+  .refresh-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  #refreshBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  #refreshBtn:hover {
+    background-color: #2980b9;
+  }
+  
+  #lastUpdated {
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  /* Servers Container */
+  .servers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .servers-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Server Card */
+  .server-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .server-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .server-header {
+    padding: 15px 20px;
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .server-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .os-type {
+    font-size: 12px;
+    opacity: 0.8;
+  }
+  
+  /* Metrics Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  /* Metric Box */
+  .metric {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+  }
+  
+  .metric-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .metric-title i {
+    color: #3498db;
+  }
+  
+  .metric-detail {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Progress Bar */
+  .progress-container {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-bar.low {
+    background-color: #2ecc71;
+  }
+  
+  .progress-bar.medium {
+    background-color: #f39c12;
+  }
+  
+  .progress-bar.high {
+    background-color: #e74c3c;
+  }
+  
+  .progress-text {
+    position: absolute;
+    right: 5px;
+    top: -18px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Memory Details */
+  .memory-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Network Stats */
+  .network-stats, .system-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .network-stats div, .system-stats div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .network-stats i, .system-stats i {
+    color: #3498db;
+    width: 16px;
+  }
+  
+  /* Loading State */
+  .loading {
+    text-align: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+    color: #7f8c8d;
+  }
+  
+  .loading i {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #3498db;
+  }
+  
+  /* Error State */
+  .error {
+    text-align: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+    color: #e74c3c;
+  }
+  
+  .error i {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .error-details {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #7f8c8d;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .server-card {
+    animation: fadeIn 0.5s ease-in-out;
+  }
